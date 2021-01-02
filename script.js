@@ -12,7 +12,7 @@ function imageMode(color) {
   image3.src = `img/undraw_conceptual_idea_${color}.svg`;
 }
 
-function setDarkLightMode(mode) {
+function setThemeMode(mode) {
   nav.style.backgroundColor =
     mode === 'light' ? 'rbg(255 255 255 / 50%)' : 'rbg(0 0 0 / 50%)';
   textBox.style.backgroundColor =
@@ -31,11 +31,11 @@ function switchTheme(event) {
     // Sets "data-theme as a property on the HTML root element <HTML>"
     document.documentElement.setAttribute('data-theme', 'dark');
     localStorage.setItem('theme', 'dark');
-    setDarkLightMode('dark');
+    setThemeMode('dark');
   } else {
     document.documentElement.setAttribute('data-theme', 'light');
     localStorage.setItem('theme', 'light');
-    setDarkLightMode('light');
+    setThemeMode('light');
   }
 }
 
